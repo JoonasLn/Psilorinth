@@ -33,7 +33,6 @@ public class NewCharacterMove : MonoBehaviour
         transform.position += moveDir * reverseCon * runSpeed * Time.deltaTime;
     }
 
-    // Move senteces
 
     void Update()
 
@@ -72,6 +71,11 @@ public class NewCharacterMove : MonoBehaviour
     {
         countFuck = true;
         reverseCon = -2; 
+    }
+
+    public void Trip()
+    {
+        transform.position = new Vector3 (-1, 38, -14);
     }
 
         
