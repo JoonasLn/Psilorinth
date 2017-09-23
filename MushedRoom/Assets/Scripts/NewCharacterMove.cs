@@ -27,5 +27,10 @@ public class NewCharacterMove : MonoBehaviour
 
     // Move senteces
 
+    public void StartSlowTimeTimer()
+    {
+        Debug.Log("slow time trigger @ " + gameObject.name);
+    }
+
 }
     
