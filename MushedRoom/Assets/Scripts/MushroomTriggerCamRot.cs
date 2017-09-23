@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomTriggerSlow : MonoBehaviour
+public class MushroomTriggerCamRot : MonoBehaviour
 {
     public int scoreValue = 1;
 
-
-    void Awake()
-    {
-
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Is triggered");
@@ -18,8 +13,7 @@ public class MushroomTriggerSlow : MonoBehaviour
 
         if (other.name == "PlayerCharacter")
         {
-            //other.GetComponent<NewCharacterMove>().StartSlowTimeTimer();
-            other.GetComponent<NewCharacterMove>().SlowTime();
+            other.GetComponent<NewCharacterMove>().CamRot();
             Destroy(gameObject);
         }
     }
