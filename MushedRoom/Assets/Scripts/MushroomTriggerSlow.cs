@@ -14,11 +14,13 @@ public class MushroomTriggerSlow : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Is triggered");
         ShroomScore.score += scoreValue;
 
         if (other.name == "PlayerCharacter")
         {
-            other.GetComponent<NewCharacterMove>().StartSlowTimeTimer();
+            //other.GetComponent<NewCharacterMove>().StartSlowTimeTimer();
+            other.GetComponent<NewCharacterMove>().SlowTime();
             Destroy(gameObject);
         }
     }

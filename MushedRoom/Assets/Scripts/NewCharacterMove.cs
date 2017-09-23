@@ -7,6 +7,9 @@ public class NewCharacterMove : MonoBehaviour
     public Rigidbody2D myRb;
     public float runSpeed = 10f;
 
+    public float slowTime;
+    public bool countSlow = false;
+
     public float horAxis;
     public float verAxis;
     // Normal Movements Variables
@@ -27,9 +30,26 @@ public class NewCharacterMove : MonoBehaviour
 
     // Move senteces
 
-    public void StartSlowTimeTimer()
+    void Update()
+
     {
-        Debug.Log("slow time trigger @ " + gameObject.name);
+        if (countSlow == true)
+        {
+            slowTime -= Time.deltaTime;
+            Debug.Log(slowTime);
+            if (slowTime <= 0)
+            {
+                runSpeed = 10f;
+                countSlow = false;
+            }
+        }
+    }
+    public void SlowTime()
+    {
+        
+        Debug.Log("Slow time");
+        countSlow = true;
+        runSpeed = 5f;   
     }
 
 }
