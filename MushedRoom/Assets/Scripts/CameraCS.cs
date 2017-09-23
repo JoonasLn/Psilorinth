@@ -24,14 +24,14 @@ public class CameraCS : MonoBehaviour {
         target = new Vector3(targetObject.position.x, targetObject.position.y + cameraDist, targetObject.position.z - cameraDist);
         transform.position = Vector3.MoveTowards(transform.position, target, step);
 
-        if (cameraRotation == true)
+        /*if (cameraRotation == true)
         {
             transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
         }
         if (cameraRotation == false)
         {
             transform.localEulerAngles = orgRot;
-        }
+        }*/
     }
 
 }
