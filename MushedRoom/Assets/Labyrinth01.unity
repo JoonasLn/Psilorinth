@@ -5962,10 +5962,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRb: {fileID: 0}
   runSpeed: 10
-  slowTime: 0
+  slowTime: 10
   countSlow: 0
+  controlFuckTime: 10
+  countFuck: 0
+  countCamRot: 0
+  camRotTime: 10
+  myCamera: {fileID: 0}
+  rotSpeed: 100
+  orgRot: {x: 0, y: 0, z: 0}
   horAxis: 0
   verAxis: 0
+  reverseCon: 1
 --- !u!50 &768146444
 Rigidbody2D:
   serializedVersion: 4
