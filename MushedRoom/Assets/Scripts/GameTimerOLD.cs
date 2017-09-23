@@ -20,8 +20,7 @@ public class GameTimerOLD : MonoBehaviour
 
         if (roundTime <= 0)
         {
-            Application.Quit();
-            UnityEditor.EditorApplication.isPlaying = false;
+            Application.LoadLevel("End Scene");
         }
 	}
 }
