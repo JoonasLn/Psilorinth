@@ -9,7 +9,7 @@ public class MoshroomTrigger1 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D co)
     {
         ShroomScore.score += scoreValue;
-        if (co.name == "Character")
+        if (co.name == "PlayerCharacter")
             Destroy(gameObject);
     }
 }
