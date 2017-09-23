@@ -7436,9 +7436,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d093d77a7cf9d948a1ceb1322eb5154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraRotation: 0
   targetObject: {fileID: 768146446}
   speed: 20
   cameraDist: 50
+  rotSpeed: 20
+  orgRot: {x: 0, y: 0, z: 0}
 --- !u!1001 &1010693971
 Prefab:
   m_ObjectHideFlags: 0

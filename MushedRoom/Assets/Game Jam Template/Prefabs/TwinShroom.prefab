@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212849589801501920}
   - component: {fileID: 95792877335544828}
   - component: {fileID: 61009851977140970}
-  - component: {fileID: 114002209855804278}
   m_Layer: 0
   m_Name: TwinShroom
   m_TagString: Untagged
@@ -74,18 +73,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114002209855804278
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123555915079492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1c0d333fa4a6994d9fcc4805840c616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValue: 1
 --- !u!212 &212849589801501920
 SpriteRenderer:
   m_ObjectHideFlags: 1
