@@ -5964,8 +5964,11 @@ MonoBehaviour:
   runSpeed: 10
   slowTime: 0
   countSlow: 0
+  controlFuckTime: 0
+  countFuck: 0
   horAxis: 0
   verAxis: 0
+  reverseCon: 1
 --- !u!50 &768146444
 Rigidbody2D:
   serializedVersion: 4
@@ -13247,6 +13250,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -378.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114491917927477720, guid: 19a816e9583982c4497ec0ae33e306ee,
+        type: 2}
+      propertyPath: roundTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19a816e9583982c4497ec0ae33e306ee, type: 2}
