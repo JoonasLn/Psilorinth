@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoshroomTriggerControlFuck : MonoBehaviour
+public class MushroomTriggerControlFuck : MonoBehaviour
 {
     public int scoreValue = 1;
 
