@@ -11,7 +11,7 @@ public class NewCharacterMove : MonoBehaviour
     public float slowTime = 5f;
     public bool countSlow = false;
 
-    public float controlFuckTime =5;
+    public float controlFuckTime = 5f;
     public bool countFuck = false;
 
     public bool countCamRot = false;
@@ -92,7 +92,7 @@ public class NewCharacterMove : MonoBehaviour
     public void ControlFuckTime()
     {
         countFuck = true;
-        reverseCon = -2; 
+        reverseCon = -1; 
     }
 
     public void CamRot()

@@ -444,6 +444,11 @@ Prefab:
       propertyPath: camRotTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114755443388119840, guid: d018b45d42c8c7a419f39ab9e6136d1d,
+        type: 2}
+      propertyPath: reverseCon
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d018b45d42c8c7a419f39ab9e6136d1d, type: 2}
   m_IsPrefabParent: 0
