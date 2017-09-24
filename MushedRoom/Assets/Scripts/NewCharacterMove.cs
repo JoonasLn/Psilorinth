@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NewCharacterMove : MonoBehaviour
 {
-    public Rigidbody2D myRb;
+    public Rigidbody myRb;
     public float runSpeed = 10f;
 
     public float slowTime = 5f;
@@ -24,20 +24,26 @@ public class NewCharacterMove : MonoBehaviour
     public float verAxis;
     public int reverseCon = 1;
 
+    public Vector3 moveDir;
+
+    public Animator spriteAnimator;
+
     // Normal Movements Variables
 
     void Start()
     {
-        myRb = GetComponent<Rigidbody2D>();
+        myRb = GetComponent<Rigidbody>();
         myCamera = Camera.main;
         orgRot = new Vector3(45, 0, 0);
+
+        GameObject.Find("PlayerSprite").GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        Vector3 moveDir = Vector3.zero;
+        moveDir = Vector3.zero;
         moveDir.x = Input.GetAxis("Horizontal"); // get result of AD keys in X
-        moveDir.y = Input.GetAxis("Vertical"); // get result of WS keys in Z
+        moveDir.z = Input.GetAxis("Vertical"); // get result of WS keys in Z
                                                // move this object at frame rate independent speed:
         transform.position += moveDir * reverseCon * runSpeed * Time.deltaTime;
 
@@ -48,6 +54,9 @@ public class NewCharacterMove : MonoBehaviour
     void Update()
 
     {
+        spriteAnimator.SetFloat("DirX", moveDir.x);
+        spriteAnimator.SetFloat("DirZ", moveDir.z);
+
         if (countCamRot == true)
         {
             camRotTime -= Time.deltaTime;
