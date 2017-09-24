@@ -1,17 +1,11 @@
 fileFormatVersion: 2
-guid: 94edf84aca7d2c14386f85a541b55fa3
-<<<<<<< HEAD
-timeCreated: 1506249094
-=======
-timeCreated: 1506250498
->>>>>>> 27d30ea8d157d1510bc5dfe2c9a903722a1ff61c
+guid: cdf1c847d572fa443b8160d7ca5a287c
+timeCreated: 1506253128
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: CharacterFront_0
-    21300002: CharacterFront_1
-    21300004: CharacterFront_2
-    21300006: CharacterFront_3
+    21300000: CharacterSideSprite_0
+    21300002: CharacterSideSprite_1
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -134,7 +128,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CharacterFront_0
+      name: CharacterSideSprite_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,33 +136,12 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 0
-<<<<<<< HEAD
-      pivot: {x: 0.5, y: 0.5}
-=======
       pivot: {x: 0, y: 0}
->>>>>>> 27d30ea8d157d1510bc5dfe2c9a903722a1ff61c
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: CharacterFront_1
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 200
-        width: 200
-        height: 200
-      alignment: 0
-<<<<<<< HEAD
-      pivot: {x: 0.5, y: 0.5}
-=======
-      pivot: {x: 0, y: 0}
->>>>>>> 27d30ea8d157d1510bc5dfe2c9a903722a1ff61c
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: CharacterFront_2
+      name: CharacterSideSprite_1
       rect:
         serializedVersion: 2
         x: 0
@@ -176,28 +149,7 @@ TextureImporter:
         width: 200
         height: 200
       alignment: 0
-<<<<<<< HEAD
-      pivot: {x: 0.5, y: 0.5}
-=======
       pivot: {x: 0, y: 0}
->>>>>>> 27d30ea8d157d1510bc5dfe2c9a903722a1ff61c
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: CharacterFront_3
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 200
-        height: 200
-      alignment: 0
-<<<<<<< HEAD
-      pivot: {x: 0.5, y: 0.5}
-=======
-      pivot: {x: 0, y: 0}
->>>>>>> 27d30ea8d157d1510bc5dfe2c9a903722a1ff61c
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
