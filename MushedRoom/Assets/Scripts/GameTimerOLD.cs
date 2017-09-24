@@ -20,7 +20,7 @@ public class GameTimerOLD : MonoBehaviour
 
         if (roundTime <= 0)
         {
-            Application.LoadLevel("End Scene");
+            Application.LoadLevel("Fail Scene");
         }
 	}
 }

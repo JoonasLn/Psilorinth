@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ShroomScore : MonoBehaviour
 {
-    public static int score;        
+    public static int score;
+    public int publicScore;        
 
     Text text;                      
 
@@ -24,5 +25,7 @@ public class ShroomScore : MonoBehaviour
 	void Update ()
     {
         text.text = "Shrooms: " + score;
+        publicScore = score;
     }
+
 }
