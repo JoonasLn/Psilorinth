@@ -671,3 +671,25 @@ BoxCollider2D:
   m_Offset: {x: 4.5084844, y: -6.5210485}
   serializedVersion: 2
   m_Size: {x: 3.9945917, y: 1.0554714}
+--- !u!1 &1182818274 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1072529704934670, guid: d018b45d42c8c7a419f39ab9e6136d1d,
+    type: 2}
+  m_PrefabInternal: {fileID: 544843533}
+--- !u!95 &1182818275
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1182818274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed6ab67cb7273f64992f81a6ff2c7c9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,7 +40,37 @@ public class NewCharacterMove : MonoBehaviour
         moveDir.y = Input.GetAxis("Vertical"); // get result of WS keys in Z
                                                // move this object at frame rate independent speed:
         transform.position += moveDir * reverseCon * runSpeed * Time.deltaTime;
+
+        // Move closer to Destination
+        Vector3 p = Vector3.MoveTowards(transform.position, moveDir, runSpeed);
+        GetComponent<Rigidbody2D>().MovePosition(p);
+
+        // Check for Input if not moving
+        if ((Vector3)transform.position == moveDir)
+        {
+            if (Input.GetKey(KeyCode.UpArrow) && valid(Vector3.up))
+                moveDir = (Vector3)transform.position + Vector3.up;
+            if (Input.GetKey(KeyCode.RightArrow) && valid(Vector3.right))
+                moveDir = (Vector3)transform.position + Vector3.right;
+            if (Input.GetKey(KeyCode.DownArrow) && valid(-Vector3.up))
+                moveDir = (Vector3)transform.position - Vector3.up;
+            if (Input.GetKey(KeyCode.LeftArrow) && valid(-Vector3.right))
+                moveDir = (Vector3)transform.position - Vector3.right;
+        }
+
+        // Animation Parameters
+        Vector3 dir = moveDir - (Vector3)transform.position;
+        GetComponent<Animator>().SetFloat("DirX", dir.x);
+        GetComponent<Animator>().SetFloat("DirY", dir.y);
+
     }
+
+    private bool valid(Vector3 up)
+    {
+        throw new NotImplementedException();
+    }
+
+
 
     // Move senteces
 
