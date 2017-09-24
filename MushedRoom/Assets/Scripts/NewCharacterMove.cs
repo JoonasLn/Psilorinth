@@ -7,11 +7,17 @@ public class NewCharacterMove : MonoBehaviour
     public Rigidbody2D myRb;
     public float runSpeed = 10f;
 
-    public float slowTime;
+    public float slowTime = 5f;
     public bool countSlow = false;
 
-    public float controlFuckTime;
+    public float controlFuckTime =5;
     public bool countFuck = false;
+
+    public bool countCamRot = false;
+    public float camRotTime = 5f;
+    public Camera myCamera;
+    public float rotSpeed = 10;
+    public Vector3 orgRot;
 
     public float horAxis;
     public float verAxis;
@@ -22,6 +28,8 @@ public class NewCharacterMove : MonoBehaviour
     void Start()
     {
         myRb = GetComponent<Rigidbody2D>();
+        myCamera = Camera.main;
+        orgRot = new Vector3(45, 0, 0);
     }
 
     void FixedUpdate()
@@ -33,11 +41,23 @@ public class NewCharacterMove : MonoBehaviour
         transform.position += moveDir * reverseCon * runSpeed * Time.deltaTime;
     }
 
+    // Move senteces
 
     void Update()
 
     {
-        if (countSlow == true)
+        if (countCamRot == true)
+        {
+            camRotTime -= Time.deltaTime;
+            Debug.Log(camRotTime);
+            myCamera.transform.Rotate(Vector3.forward, rotSpeed * Time.deltaTime);
+            if (camRotTime <= 0)
+            {
+                countCamRot = false;
+                myCamera.transform.localEulerAngles = orgRot;
+            }
+        }
+        else if (countSlow == true)
         {
             slowTime -= Time.deltaTime;
             Debug.Log(slowTime);
@@ -48,7 +68,7 @@ public class NewCharacterMove : MonoBehaviour
             }
         }
 
-        if (countFuck == true)
+        else if (countFuck == true)
         {
              controlFuckTime -= Time.deltaTime;
              if (controlFuckTime <= 0)
@@ -71,6 +91,12 @@ public class NewCharacterMove : MonoBehaviour
     {
         countFuck = true;
         reverseCon = -2; 
+    }
+
+    public void CamRot()
+    {
+        Debug.Log("Slow time");
+        countCamRot = true;
     }
 
     public void Trip()
